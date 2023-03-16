@@ -1,0 +1,2 @@
+# BookOfDonationManagement_WechatMini
+毕业设计作品【附带小程序的图书捐赠系统】
