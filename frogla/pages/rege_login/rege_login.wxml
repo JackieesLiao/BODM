@@ -1,0 +1,85 @@
+<view class='shopDetail-box'>
+	<view class='shopDetail-box'>
+		<view class="tab-left">
+			<view class="{{tabArr.curHdIndex=='1'? 'active' : ''}}" id="1" data-id="1" bindtap="tab">注册</view>
+			<view class="{{tabArr.curHdIndex=='2'? 'active' : ''}}" id="2" data-id="2" bindtap="tab">登录</view>
+		</view>
+		<view class="tab-right">
+			<view class="right-item {{tabArr.curBdIndex=='1'? 'active' : ''}}">
+			</view>
+			<view class="right-item {{tabArr.curBdIndex=='2'? 'active' : ''}}">
+			</view>
+		</view>
+	</view>
+	<view class="tab-right">
+		<view class="right-item {{tabArr.curBdIndex=='1'? 'active' : ''}}">
+			<form bindsubmit="RegisterInfo">
+				<view class="main">
+					<view class="profile-items">
+						<text class="word">姓名</text>
+						<input name="name" focus="true" />
+					</view>
+					<view class="profile-items gender">
+						<text class="word">性别</text>
+						<radio-group name="gender">
+							<label>
+								<radio color="#54afc5" value="男" />男</label>
+							<label>
+								<radio color="#54afc5" value="女" />女</label>
+						</radio-group>
+					</view>
+					<view class="profile-items house-id">
+						<text class="word">学舍</text>
+						<picker name="buildingNumber" bindchange="changeBuilding" value="{{buildingArray[buildingIndex]}}" range="{{buildingArray}}">
+							<view class="building">
+								{{buildingArray[buildingIndex]}}幢
+							</view>
+						</picker>
+						<picker name="unitNumber" bindchange="changeUnit" value="{{unitArray[unitIndex]}}" range="{{unitArray}}">
+							<view class="unit">
+								{{unitArray[unitIndex]}}楼
+							</view>
+						</picker>
+						<picker name="roomNumber" bindchange="changeRoom" value="{{roomArray[roomIndex]}}" range="{{roomArray}}">
+							<view class="room">
+								{{roomArray[roomIndex]}}房间
+							</view>
+						</picker>
+					</view>
+					<view class="profile-items">
+						<text class="word">手机号</text>
+						<input name="phone_number" pattern="^1\d{10}$" maxlength="11" type="number" />
+					</view>
+					<view class="profile-items">
+						<text class="word">密码</text>
+						<input name="pwd" type="password" password="true" maxlength="11" />
+					</view>
+				</view>
+				<button  bindtap="onButtonTap" form-type="submit"> 注册 </button>   
+        <label>
+        <text>
+         注意：\n
+        1：本小程序仅为毕设作品的前端而无商业价值，不会收集任何用户的个人隐私。\n
+        2：您在本界面注册所填写的所有信息仅仅用作登录该小程序用，不做其他用途。\n
+        3：不要泄露自己的姓名、手机号等真实信息。\n
+        </text>
+        </label>
+			</form>
+		</view>
+		<view class="right-item {{tabArr.curBdIndex=='2'? 'active' : ''}}">
+			<form bindsubmit="UserLogin">
+				<view class="main">
+					<view class="profile-items">
+						<text class="word">手机号</text>
+						<input name="phone_number"  pattern="^1\d{10}$" maxlength="11" type="number" />
+					</view>
+					<view class="profile-items">
+						<text class="word">密码</text>
+						<input name="pwd" type="password" password="true" maxlength="11"  />
+					</view>
+				</view>
+				<button bindtap="onButtonTap" form-type="submit"> 登录 </button>
+			</form>
+		</view>
+	</view>
+</view>
