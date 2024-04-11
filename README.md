@@ -1,63 +1,68 @@
-# Book
-基于java web ssm（Springboot+SpringMVC+Mybatis）+Mysql+微信小程序的图书捐赠管理系统设计与实现毕业设计论文
+# BookOfDonationManagement_WechatMini
+##  Configuration required for compilation:
+###  Operating system: win 10
+###  Develop tools:
+     Front-end: WeChat developer tools
+     Backend: IDEA LatestVersion
+     Database: Navicat for MySQL  
+### Development environment configuration
+      JDK1.8
+      Apache-tomcat-8.5.82
+      MySql 5.7
+### Development language:  
+Frontend: JavaScript && CSS  
+Backend: Java    
+Database: MySQL        
 
-使用软件 idea mysql数据库 微信开发者工具 tomcat  Navicatpremium
+# Functional division    
+## Book   
 
-该项目源于https://www.bilibili.com/video/BV1aD4y1X77R?p=2进行修改
+If you can't log in, check whether the pom file is red and whether the database configuration is correct. The picture folder is re-added in the tomcat configuration.    
 
-登录不了看pom文件有没有报红，数据库配置是否正确。图片文件夹在tomcat配置里自己重新添加
+Use the tutorial idea to run the shequ file. Change the username and password in jdbc.properties to your own database username and password.   
+<img width="935" alt="144386118-ca647489-d1a0-4613-bbcd-3aaec32b9f37" src="https://user-images.githubusercontent.com/85597324/145163152-fa5f3f79-720a-447e-9bdb-2861030905d0.png">   
 
-使用教程 idea运行shequ文件 jdbc.properties中username和password改成自己的数据库用户名以及密码
-<img width="935" alt="144386118-ca647489-d1a0-4613-bbcd-3aaec32b9f37" src="https://user-images.githubusercontent.com/85597324/145163152-fa5f3f79-720a-447e-9bdb-2861030905d0.png">
+Navicat software mysql imports and runs sql database files     
 
-Navicatpremium软件 mysql 导入运行sql数据库文件
-
-微信开发者工具 运行frogla文件
-
-
-
-
-本图书捐赠管理系统的用户角色设计分析是分两部分的，根据不同用户的不同角色，对系统进行用例设计，为后续设计做铺垫。
-本系统主要分为普通用户和管理员。普通用户主要是对微信小程序进行系统的使用。而管理员主要是对本图书捐赠管理系统的所有信息进行管理，主要包括用户这部分所涉及到的信息等进行管理。
-
-小程序前端用户的主要功能有：
-注册登录，普通用户可填写信息进行注册登录以享用功能。
-文章查看，普通用户可查看发表的文章。
-意见反馈，普通用户可对小程序的使用问题进行反馈。
-图书查看，普通用户可看到所有捐赠图书信息，根据提供的图书编号进行查询。
-图书收藏，普通用户可对捐赠图书进行收藏。
-公告查看，普通用户可看到管理员发布的公告。
-
-后台管理者主要功能有：
-文章添加，管理员可根据投稿文章对小程序进行文章添加。
-图书添加，管理员可根据捐赠人信息对小程序进行捐赠图书添加。
-图书收藏，管理员可查询到用户收藏图书情况。
-意见反馈，管理员可查询到用户意见反馈内容。
+WeChat developer tools run frogla files    
 
 
+The user role design analysis of this book donation management system is divided into two parts. According to the different roles of different users, the system is designed with use cases to pave the way for subsequent design.    
+This system is mainly divided into ordinary users and administrators. Ordinary users mainly use WeChat mini programs systematically. The administrator mainly manages all the information in this book donation management system, including the information involved in the user part.    
+
+The main functions of mini program front-end users are:
+1)Register and log in. Ordinary users can fill in the information to register and log in to enjoy the functions.   
+2)Article viewing, ordinary users can view published articles.   
+3)Feedback: Ordinary users can provide feedback on the use of mini programs.   
+4)Book viewing, ordinary users can see all donated book information and query according to the provided book number.   
+5)Book collection, ordinary users can collect donated books.   
+6)Announcement viewing, ordinary users can see the announcements issued by the administrator.      
+
+The main functions of the backend manager are:
+1)Article addition, the administrator can add articles to the mini program based on the submitted articles.    
+2)Book addition: Administrators can add donated books to the mini program based on donor information.    
+3)Book collection, the administrator can query the user's collection of books.   
+4)Feedback: Administrators can query user feedback content.   
 
 
+## Introduction to front-end operating effects
 
-
-运行效果简介
-
-
-4.1首页功能
-图书捐赠管理系统小程序系统的主页有三部分组成，即首页，公告，我的。其中首页部分为本系统最主要的部门，提供了文章阅读、意见反馈以及图书查询功能。进入后显示的页面如下图所示。
+### A) Home page function
+The homepage of the book donation management system applet system consists of three parts, namely homepage, announcement, and mine. The home page is the most important part of the system, providing article reading, feedback and book query functions. The page displayed after entering is as shown below.    
 ![image](https://user-images.githubusercontent.com/85597324/145163998-cf4743d7-1161-41bb-b4f2-fdc0a761823a.png)
 
 
-4.2文章功能
-改功能主要实现文章阅读，文章由管理员进行审核发表后，用户可在改功能下进行选读文章。
+### B) Article function   
+The modification function mainly implements article reading. After the article is reviewed and published by the administrator, users can select and read articles under the modification function.    
  ![image](https://user-images.githubusercontent.com/85597324/145164011-4bd5a9fd-6669-4d51-8eae-b839b94b8629.png)
 
 
-4.3图书功能
-该功能为本系统主要模块，需要登录才可以使用，一共由四个功能模块组成，分别是图书列表、图书详细、图书搜索以及图书收藏。
-图书列表由管理员进行审核发布捐赠图书相关信息，用户可在改功能下进行选择捐赠图书查看详细。
-图书详细由用户点击详细查看功能进行图书详细查看捐赠图书的捐赠人简介、图书寄语以及捐书时间以及立即收藏功能。
-图书收藏由用户点击立即收藏对喜欢的图书进行收藏。
-图书搜索由用户输入图书编号对图书列表进行精确检索，搜索即转跳到对应图书编号的图书详细页面。
+### C) Books function    
+This function is the main module of this system and needs to be logged in before it can be used. It consists of four functional modules, namely book list, book details, book search and book collection.      
+1)The book list is reviewed by the administrator and released related information about donated books. Users can select donated books under the modified function to view details.    
+2)For book details, the user can click on the detailed view function to view the donor's profile of the donated book, book message and book donation time, as well as the immediate collection function.   
+3)Book collection allows users to click Collection Now to collect their favorite books.   
+4)In the book search, the user enters the book number to accurately retrieve the book list, and the search jumps to the book details page corresponding to the book number.   
  
 ![image](https://user-images.githubusercontent.com/85597324/145164050-cb6e16b4-15fb-4481-a3fd-c027f3bfd716.png)
 ![image](https://user-images.githubusercontent.com/85597324/145164063-eadd439c-305b-4dae-9644-2db48e586469.png)
@@ -65,41 +70,40 @@ Navicatpremium软件 mysql 导入运行sql数据库文件
 ![image](https://user-images.githubusercontent.com/85597324/145164086-acdecee0-ab7b-45ed-880f-16fb2241c6af.png)
 
 
-4.4意见功能
-该功能主要实现由用户对软件使用问题以及软件使用问题进行反馈，反馈内容可有文字以及图片，反馈后由管理员在后台进行查看处理。
+### D) Opinion function
+This function mainly allows users to provide feedback on software usage problems and software usage problems. 
+The feedback content can include text and pictures. After the feedback is given, the administrator will review and process it in the background.       
  
 ![image](https://user-images.githubusercontent.com/85597324/145164110-2f192208-8aa2-4415-96eb-f1edceebe214.png)
 
 
-4.5公告功能
-公告由管理员进行发布，用户可随时查看公告内容。
+### E)Announcement function
+Announcements are issued by the administrator, and users can view the announcement content at any time.     
 
  ![image](https://user-images.githubusercontent.com/85597324/145164125-79f0419c-e3b1-437c-835c-b6a378411968.png)
 
 
-4.6我的功能
-主要实现用户登录与注册功能以及我的图书收藏查看功能。
- ![image](https://user-images.githubusercontent.com/85597324/145164134-e7116098-11db-42f2-885c-335ffbbfefbe.png)
+### F)My functions
+It mainly implements user login and registration functions and my book collection viewing function.    
+ ![image](https://user-images.githubusercontent.com/85597324/145164134-e7116098-11db-42f2-885c-335ffbbfefbe.png)   
 
-4.7注册功能
-该功能主要由用户进行填写性别、选择性别、选择学舍房间号、手机号以及密码进行注册。
- ![image](https://user-images.githubusercontent.com/85597324/145164151-f35dc404-a71b-4b52-b5b4-2e606cd5e6eb.png)
+### G)Registration function
+This function mainly requires users to fill in their gender, select their gender, select their school room number, mobile phone number and password to register.   
+ ![image](https://user-images.githubusercontent.com/85597324/145164151-f35dc404-a71b-4b52-b5b4-2e606cd5e6eb.png)   
 
 
-4.8登录功能
-该功能主要由用户输入注册时使用的手机号以及密码进行登录。
+### H)Login function  
+This function mainly requires users to log in by entering the mobile phone number and password used during registration.    
  ![image](https://user-images.githubusercontent.com/85597324/145164165-c8683ccd-9e20-4ac4-afa5-fe1abc9e3eef.png)
 
 
-4.9收藏功能
-改功能主要由用户对收藏的图书进行查看，以及查看图书详细功能。该功能需登录后才可以使用。
+### I)Collection function   
+The modified function is mainly for users to view the collected books and view the detailed functions of the books. This function requires logging in before it can be used.    
 
 
-![image](https://user-images.githubusercontent.com/85597324/145163392-cae41d3f-fccb-49c5-8098-dafb495b78d0.png)
+![image](https://user-images.githubusercontent.com/85597324/145163392-cae41d3f-fccb-49c5-8098-dafb495b78d0.png)   
 
-
-
-后台效果
+## Introduction to back-end operating effects
 
 ![image](https://user-images.githubusercontent.com/85597324/145164268-c8691791-ee7e-4511-b1c1-2131a90682ba.png)
 ![image](https://user-images.githubusercontent.com/85597324/145164296-5a0e49a7-6a36-4cfc-b1d5-f59ebbdd81b6.png)
